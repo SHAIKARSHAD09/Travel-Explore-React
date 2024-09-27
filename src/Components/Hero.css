@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    background: url("../Assests/images/image-1\ -\ Copy.jpg") no-repeat center;
+    background-size: cover;
+    position: relative; 
+}
+
+.hero-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+h1{
+    z-index: 2;
+    font-size: 3rem;
+}
+
+.text-hero{
+    position: absolute;
+    z-index: 2;
+    top: 60%;
+}
+
+.btn-hero{
+    margin-top: 2.5rem;
+    padding: 10px;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-hero:hover{
+    background-color: var(--grey-500);
+
+}
+
+

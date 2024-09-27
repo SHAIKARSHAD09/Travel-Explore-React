@@ -1,0 +1,139 @@
+@import url("../index.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background: var(--grey-50);
+    box-shadow: var(--shadow-1);
+    
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-header a{
+    color: var(--primary-500);
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0 3px 4px rgba(0,0,0,0.5);
+}
+
+.btn-signup{
+    display: none;
+}
+
+.toggle-btn{
+    border-color: transparent;
+    background: transparent;
+    font-size: 1.5rem;
+    color: var(--primary-500);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.toggle-btn:hover{
+    color: var(--primary-700);
+    transform: rotate(90deg);
+}
+
+.links a{
+    display: block;
+    color: var(--grey-700);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+.links a:hover{
+    background: var(--primary-100);
+    padding-left: 1.5rem;
+    color: var(--primary-700);
+}
+
+.links-container{
+    overflow: hidden;
+    transition: var(--transition);
+    
+}
+
+@media screen and (min-width: 800px){
+    .toggle-btn{
+        display: none;
+    }
+
+    .nav-header{
+        padding: 0;
+    }
+
+    .nav-container{
+        position: fixed;
+        top: 15px;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        z-index: 100;
+        background: var(--grey-50);
+        border-radius: 10px;
+    }
+    .links-container{
+        height: auto !important;
+    }
+    .links{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        color: var(--primary-700);
+    }
+    .links a{
+        padding: 0;
+        margin-left: 1rem;
+    }
+    .links a:hover{
+        background: transparent;
+        padding: 0;
+    }
+
+    .btn-signup{
+        display: block;
+        background:var(--grey-300);
+        padding: 5px;
+        border: transparent;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .btn-signup::before{
+        width: 0;
+        content: "";
+        height: 2px;
+        background: var(--primary-500);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: var(--transition);
+    }
+    .btn-signup:hover::before{
+        width: 100%;
+    }
+   
+    
+
+    
+}
